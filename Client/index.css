@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+.border-bottom {
+  border-bottom: 1px solid grey;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}

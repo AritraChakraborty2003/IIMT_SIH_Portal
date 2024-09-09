@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "This is the frontend for the iimt sih application",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "lint": "eslint.",
+    "format": "prettier --write.",
+    "precommit": "lint-staged",
+    "prepush": "yarn test",
+    "test": "jest"
+  },
+  "keywords": [
+    "code",
+    "react.js",
+    "sih",
+    "registrations",
+    "iimt"
+  ],
+  "author": "Aritra Chakraborty",
+  "license": "ISC",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.45",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.10"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
