@@ -105,7 +105,7 @@ const LoginArea = () => {
                 type="text"
                 id="teamMembers"
                 className="w-[95%] p-2  border-bottom"
-                placeholder="Enter Team Members..."
+                placeholder="Enter Team Members using commas..."
               />
               <br></br>
               <br></br>
