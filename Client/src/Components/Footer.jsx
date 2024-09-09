@@ -9,7 +9,7 @@ const Footer = () => {
               className="max-w-full max-h-full object-contain"
             />
           </div>
-          &copy;2024 VentureDrobe. &nbsp;All Rights Reserved.
+          &nbsp; &copy;2024 VentureDrobe. &nbsp;All Rights Reserved.
         </div>
       </div>
     </>
