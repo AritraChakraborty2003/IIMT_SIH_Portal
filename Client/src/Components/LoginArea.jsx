@@ -40,6 +40,14 @@ const LoginArea = () => {
         .then((res) => {
           if (res.data.status === 200) {
             alert("Data sent successfully");
+            document.getElementById("teamName").value = "";
+            document.getElementById("teamLeader").value = "";
+            document.getElementById("phoneNo").value = "";
+            document.getElementById("projectCategory").value = "";
+
+            document.getElementById("projectDepartment").value = "";
+            document.getElementById("projectDetails").value = "";
+            document.getElementById("teamMembers").value = "";
           } else {
             console.log("Error Occurred Please try again...");
           }
