@@ -4,23 +4,47 @@ import axios from "axios";
 const LoginArea = () => {
   const sendData = (e) => {
     e.preventDefault();
-    axios
-      .post(API_Production_URL + "teams", {
-        teamName: document.getElementById("teamName").value,
-        teamLeader: document.getElementById("teamLeader").value,
-        phoneNo: document.getElementById("phoneNo").value,
-        projectCategory: document.getElementById("projectCategory").value,
-        projectDepartment: document.getElementById("projectDepartment").value,
-        projectDetails: document.getElementById("projectDetails").value,
-        teamMembers: document.getElementById("teamMembers").value,
-      })
-      .then((res) => {
-        if (res.data.status === 200) {
-          alert("Data sent successfully");
-        } else {
-          console.log("Error Occurred Please try again...");
-        }
-      });
+
+    const teamName = document.getElementById("teamName").value;
+    const teamLeader = document.getElementById("teamLeader").value;
+    const phoneNo = document.getElementById("phoneNo").value;
+    const projectCategory = document.getElementById("projectCategory").value;
+    const projectDepartment =
+      document.getElementById("projectDepartment").value;
+    const projectDetails = document.getElementById("projectDetails").value;
+    const teamMembers = document.getElementById("teamMembers").value;
+
+    if (
+      teamName === "" ||
+      teamLeader === "" ||
+      phoneNo === "" ||
+      projectCategory === "" ||
+      projectDepartment === "" ||
+      projectDetails === "" ||
+      teamMembers === "" ||
+      projectDetails === "" ||
+      teamMembers === ""
+    ) {
+      alert("Please fill all the fields");
+    } else {
+      axios
+        .post(API_Production_URL + "teams", {
+          teamName: teamName,
+          teamLeader: teamLeader,
+          phoneNo: phoneNo,
+          projectCategory: projectCategory,
+          projectDepartment: projectDepartment,
+          projectDetails: projectDetails,
+          teamMembers: teamMembers,
+        })
+        .then((res) => {
+          if (res.data.status === 200) {
+            alert("Data sent successfully");
+          } else {
+            console.log("Error Occurred Please try again...");
+          }
+        });
+    }
   };
   return (
     <>
