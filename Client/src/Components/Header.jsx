@@ -15,7 +15,9 @@ const Header = () => {
           <p className="font-normal lg:text-[2.45vmin]">Login</p>
           <p className="font-normal lg:text-[2.45vmin]">Results</p>
           <p className="font-normal lg:text-[2.45vmin] hidden lg:block">
-            Announcements
+            <a href="https://www.sih.gov.in/" target="_blank">
+              Announcements
+            </a>
           </p>
         </div>
       </div>
