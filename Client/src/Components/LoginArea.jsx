@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { API_Test_URL } from "../../utils/constants";
+import { API_Test_URL, API_Production_URL } from "../../utils/constants";
 import axios from "axios";
 const LoginArea = () => {
   const sendData = (e) => {
     e.preventDefault();
     axios
-      .post(API_Test_URL + "teams", {
+      .post(API_Production_URL + "teams", {
         teamName: document.getElementById("teamName").value,
         teamLeader: document.getElementById("teamLeader").value,
         phoneNo: document.getElementById("phoneNo").value,
