@@ -12,6 +12,8 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static("uploads"));
 const PORT = process.env.PORT || 3000;
 
 //MongoDB Connection Settings

@@ -39,7 +39,11 @@ const LoginArea = () => {
         })
         .then((res) => {
           if (res.data.status === 200) {
-            alert("Data sent successfully");
+            alert(
+              `Data sent successfully and your password for login is ${
+                teamName + "_SIH_2024"
+              }`
+            );
             document.getElementById("teamName").value = "";
             document.getElementById("teamLeader").value = "";
             document.getElementById("phoneNo").value = "";
@@ -59,15 +63,15 @@ const LoginArea = () => {
       <div className="mt-[2vmin] lg:mt-[0] mainContainer flex justify-center items-center">
         <div className="hidden w-[45vw] p-4 lg:block leftHolder">
           <div className="w-[50vw]  flex justify-center items-center">
-            <div className="mainBox">
-              <div className=" w-[20vw] h-[20vh] ml-[6vmin]">
+            <div className="mainBox mt-[-6vmin]">
+              <div className=" w-[25vw] h-[25vh] ml-[10vmin]">
                 <img
                   src="https://i.postimg.cc/Gh6KR7Ch/SIH.png"
                   alt="User"
                   className="ImageHolder max-w-full max-h-full object-contain"
                 />
               </div>
-              <div className="imageHolder w-[30vw] h-[50vh]">
+              <div className="imageHolder w-[40vw] h-[60vh] ml-4">
                 <img
                   src="https://i.postimg.cc/WzGN4YyL/IIMT.jpg"
                   alt="User"
@@ -77,7 +81,7 @@ const LoginArea = () => {
             </div>
           </div>
         </div>
-        <div className="p-2 rightHolder w-[95vw] lg:w-[50vw] flex justify-center items-center">
+        <div className="rightHolder w-[95vw] lg:w-[50vw] flex justify-center items-center mt-5">
           <div>
             <p className="mt-[5vmin] lg:mt-[0] text-2xl font-roboto font-extrabold">
               SIH Registration Portal (IIMT College Of Engg.)

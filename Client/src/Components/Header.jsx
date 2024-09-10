@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <>
@@ -12,12 +14,21 @@ const Header = () => {
         </div>
         <div className="middleHolder w-[25vmin] lg:w-[25vw]"></div>
         <div className="iconHolder h-[10vmin] flex gap-x-5 lg:gap-x-12 font-roboto lg:mt-3">
-          <p className="font-normal lg:text-[2.45vmin]">Login</p>
+          <p className="font-normal lg:text-[2.45vmin] hidden lg:block">
+            {" "}
+            <Link to="/">Home</Link>
+          </p>
+          <p className="font-normal lg:text-[2.45vmin]">
+            <Link to="/login">Login</Link>
+          </p>
           <p className="font-normal lg:text-[2.45vmin]">Results</p>
           <p className="font-normal lg:text-[2.45vmin] hidden lg:block">
             <a href="https://www.sih.gov.in/" target="_blank">
               Announcements
             </a>
+          </p>
+          <p className="font-normal lg:text-[2.45vmin] hidden lg:block">
+            Admin
           </p>
         </div>
       </div>
