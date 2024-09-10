@@ -54,7 +54,7 @@ const Dashboard = () => {
                     : "Will be  updated soon"}
                 </p>
                 <br></br>
-                <p className="text-center text-[8vmin] lg:text-[5vmin] font-medium">
+                <p className="text-center text-[7vmin] lg:text-[5vmin] font-medium">
                   {datesData.length > 0
                     ? datesData[1].title +
                       " " +
