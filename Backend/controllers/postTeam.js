@@ -1,5 +1,5 @@
 import { teams } from "../Models/team.js";
-import { logins } from "../Models/login..js";
+import { logins } from "../Models/login.js";
 const postTeam = () => {
   return (req, res) => {
     const {

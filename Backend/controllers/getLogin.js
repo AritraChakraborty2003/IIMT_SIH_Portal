@@ -1,4 +1,4 @@
-import { logins } from "../Models/login..js";
+import { logins } from "../Models/login.js";
 
 const getLogin = (req, res) => {
   logins

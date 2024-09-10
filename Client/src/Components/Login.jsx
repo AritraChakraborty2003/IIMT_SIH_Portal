@@ -1,7 +1,33 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import { API_Test_URL, API_Production_URL } from "../../utils/constants";
+import axios from "axios";
 const Login = () => {
-  //const senData=()
+  const sendData = (e) => {
+    e.preventDefault();
+    const teamName = document.getElementById("teamName").value;
+    const password = document.getElementById("password").value;
+    if (teamName === "" || password === "") {
+      alert("Invalid Credentials");
+    } else {
+      axios
+        .post(API_Test_URL + "teams/login/", {
+          teamName: teamName,
+          password: password,
+        })
+        .then((res) => {
+          if (res.data.message === "Login successful") {
+            localStorage.setItem("isLoggedIn", true);
+            window.location.href = "/dashboard";
+          } else {
+            alert("Invalid Credentials");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  };
   return (
     <>
       <Header />

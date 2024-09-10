@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Login from "./Components/Login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Dashboard from "./Components/Dashboard";
 const AppLayout = () => {
   return (
     <>
@@ -23,6 +24,10 @@ const appRouter = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
 ]);
 

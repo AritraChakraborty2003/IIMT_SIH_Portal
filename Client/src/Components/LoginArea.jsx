@@ -63,7 +63,7 @@ const LoginArea = () => {
       <div className="mt-[2vmin] lg:mt-[0] mainContainer flex justify-center items-center">
         <div className="hidden w-[45vw] p-4 lg:block leftHolder">
           <div className="w-[50vw]  flex justify-center items-center">
-            <div className="mainBox mt-[-6vmin]">
+            <div className="mainBox mt-[-7vmin]">
               <div className=" w-[25vw] h-[25vh] ml-[10vmin]">
                 <img
                   src="https://i.postimg.cc/Gh6KR7Ch/SIH.png"

@@ -6,8 +6,11 @@ const postLogin = () => {
     logins
       .find({ teamName: teamName, password: password })
       .then((obj) => {
-        console.log(obj);
-        res.status(200).send({ message: "Login successful" });
+        if (obj.length > 0) {
+          res.status(200).send({ message: "Login successful" });
+        } else {
+          res.status(200).send({ message: "Invalid credentials" });
+        }
       })
       .catch((err) => {
         console.log(err);
