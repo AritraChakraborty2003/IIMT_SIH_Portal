@@ -28,7 +28,7 @@ const Dates = () => {
     <>
       <div className=" rightHolder lg:w-[100vw] flex justify-center items-center">
         <div>
-          <p className="mt-[10vmin] lg:mt-[0] text-2xl font-roboto font-extrabold">
+          <p className="mt-[15vmin] lg:mt-[0] text-2xl font-roboto font-extrabold">
             Add your Dates...
           </p>
           <p />

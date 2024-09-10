@@ -13,7 +13,7 @@ const Login = () => {
       alert("Invalid Credentials");
     } else {
       axios
-        .post(API_Production_URL + "teams/login/", {
+        .post(API_Test_URL + "teams/login/", {
           teamName: teamName,
           password: password,
         })

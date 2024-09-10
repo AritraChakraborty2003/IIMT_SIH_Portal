@@ -9,6 +9,8 @@ import { TeamRouter } from "./routes/TeamRouter.js";
 import { generalRouter } from "./routes/generalRouter.js";
 import { resultRouter } from "./routes/resultRouter.js";
 import { datesRouter } from "./routes/datesRouter.js";
+import { AcceptedRouter } from "./routes/AcceptedRouter.js";
+import { DumpsRouter } from "./routes/DumpsRouter.js";
 //The important config settings...
 dotenv.config();
 const app = express();
@@ -26,8 +28,8 @@ app.use("/", generalRouter);
 app.use("/api/v1/teams", TeamRouter);
 app.use("/api/v1/results", resultRouter);
 app.use("/api/v1/dates", datesRouter);
-// app.use("/api/v1/accept");
-// app.use("/api/v1/dump");
+app.use("/api/v1/accept", AcceptedRouter);
+app.use("/api/v1/dumps", DumpsRouter);
 
 //Express app listen Logic
 app.listen(PORT, () => {

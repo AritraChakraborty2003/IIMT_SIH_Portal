@@ -28,7 +28,7 @@ const LoginArea = () => {
       alert("Please fill all the fields");
     } else {
       axios
-        .post(API_Production_URL + "teams", {
+        .post(API_Test_URL + "teams", {
           teamName: teamName,
           teamLeader: teamLeader,
           phoneNo: phoneNo,
