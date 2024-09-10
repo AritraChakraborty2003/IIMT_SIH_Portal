@@ -54,7 +54,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="p-2 rightHolder w-[95vw] lg:w-[50vw] flex justify-center items-center">
+        <div className="h-[75vh] lg:h-full p-2 rightHolder w-[95vw] lg:w-[50vw] flex justify-center items-center">
           <div>
             <p className="mt-[5vmin] lg:mt-[0] text-2xl font-roboto font-extrabold">
               Login to your dashboard!...
