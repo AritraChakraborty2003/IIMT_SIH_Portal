@@ -12,7 +12,7 @@ const Results = () => {
     const formData = new FormData();
     formData.append("image", file);
     axios
-      .post(API_Test_URL + "results", formData)
+      .post(API_Production_URL + "results", formData)
       .then((res) => {
         if (res.data.status === 200) {
           alert("Data uploaded successfully...");

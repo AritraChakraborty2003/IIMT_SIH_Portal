@@ -8,4 +8,16 @@ const getSelect = (req, res) => {
       console.log(err);
     });
 };
-export { getSelect };
+
+const getSelectQuery = (req, res) => {
+  const teamName = req.query.teamName;
+  Selects.find({ teamName })
+    .then((response) => {
+      if (response.length > 0) return res.status(200).send({ status: true });
+      else return res.status(200).send({ status: false });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+export { getSelect, getSelectQuery };
