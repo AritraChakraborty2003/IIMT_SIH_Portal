@@ -13,7 +13,7 @@ const Teamcard = (props) => {
         if (response.data.status === 200) {
           axios
             .delete(
-              API_Test_URL +
+              API_Production_URL +
                 "teams/delete/data?teamName=" +
                 args[1] +
                 "&teamLeader=" +
@@ -42,7 +42,7 @@ const Teamcard = (props) => {
   const RejectedData = (...args) => {
     // Here you can also make a request to your backend to store this data.
     axios
-      .post(API_Test_URL + "dumps", {
+      .post(API_Production_URL + "dumps", {
         teamLeader: args[0],
         teamName: args[1],
         phoneNo: args[2],
@@ -51,7 +51,7 @@ const Teamcard = (props) => {
         if (response.data.status === 200) {
           axios
             .delete(
-              API_Test_URL +
+              API_Production_URL +
                 "teams/delete/data?teamName=" +
                 args[1] +
                 "&teamLeader=" +

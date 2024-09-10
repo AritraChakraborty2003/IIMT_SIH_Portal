@@ -3,9 +3,10 @@ import Header from "./Header";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
-  API_Production_URL,
   API_Test_URL,
+  API_Production_URL,
   BASE_Test_URL,
+  BASE_Production_URL,
 } from "../../utils/constants";
 import axios from "axios";
 const Dashboard = () => {
@@ -15,15 +16,15 @@ const Dashboard = () => {
   const [resultsData, setResultsData] = useState([]);
   const [selected, setSelected] = useState(false);
   useEffect(() => {
-    axios.get(API_Test_URL + "dates").then((res) => {
+    axios.get(API_Production_URL + "dates").then((res) => {
       setDatesData(res.data);
     });
-    axios.get(API_Test_URL + "accept").then((res) => {
+    axios.get(API_Production_URL + "accept").then((res) => {
       setResultsData(res.data);
     });
 
     axios
-      .get(API_Test_URL + "accept/data?teamName=" + location.state.val)
+      .get(API_Production_URL + "accept/data?teamName=" + location.state.val)
       .then((res) => {
         console.log(res);
         setSelected(res.data.status);
@@ -79,7 +80,7 @@ const Dashboard = () => {
                 {resultsData.length > 0 && selected && (
                   <>
                     <img
-                      src={BASE_Test_URL + "tick.png"}
+                      src={BASE_Production_URL + "tick.png"}
                       height={50}
                       width={50}
                     ></img>
@@ -91,7 +92,7 @@ const Dashboard = () => {
                 {resultsData.length > 0 && !selected && (
                   <>
                     <img
-                      src={BASE_Test_URL + "hold.png"}
+                      src={BASE_Production_URL + "hold.png"}
                       height={60}
                       width={60}
                     ></img>
