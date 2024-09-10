@@ -21,7 +21,7 @@ const Header = (props) => {
               />
             </div>
           </div>
-          <div className="middleHolder w-[29vmin] lg:w-[25vw]"></div>
+          <div className="middleHolder w-[50vmin] lg:w-[25vw]"></div>
           <div className="iconHolder h-[10vmin] flex gap-x-5 lg:gap-x-12 font-roboto lg:mt-3">
             <p className="font-normal lg:text-[2.45vmin] hidden lg:block">
               {" "}
