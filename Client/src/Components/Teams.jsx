@@ -6,7 +6,7 @@ const Teams = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get(API_Test_URL + "teams")
+      .get(API_Production_URL + "teams")
       //.get(API_Production_URL + "teams")
       .then((res) => {
         console.log(res);
@@ -17,7 +17,7 @@ const Teams = () => {
 
   return (
     <>
-      <div className="mt-10 TeamHolder flex flex-wrap justify-center items-center w-[100vw]">
+      <div className="pb-[15vmin] mt-1 lg:mt-10 TeamHolder flex flex-wrap justify-center items-center w-[100vw]">
         {(data.length === 0 && <p>Loading Teams....</p>) ||
           data.map((val) => {
             return <Teamcard key={val._id} data={val} />;

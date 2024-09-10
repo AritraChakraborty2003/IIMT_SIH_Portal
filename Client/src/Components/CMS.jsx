@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Dashboard from "./Dashboard";
 import Footer from "./Footer";
 import Header from "./Header";
+import Dates from "./Dates";
 import Teams from "./Teams";
 import Results from "./AddResults";
 
@@ -26,7 +27,7 @@ const CMS = () => {
           Teams
           <div
             id="u1"
-            className="underLine w-[12vmin] h-[4px] bg-[#d3d3d3]"
+            className="underLine w-[16vmin] h-[4px] bg-[#d3d3d3]"
             onClick={() => {
               document.getElementById(active).style.backgroundColor = "#d3d3d3";
               setActive("u1");
@@ -44,7 +45,7 @@ const CMS = () => {
           Add Dates
           <div
             id="u2"
-            className="underLine w-[12vmin] h-[4px] bg-[#d3d3d3]"
+            className="underLine w-[16vmin] h-[4px] bg-[#d3d3d3]"
             onClick={() => {
               document.getElementById(active).style.backgroundColor = "#d3d3d3";
               setActive("u2");
@@ -62,7 +63,7 @@ const CMS = () => {
           Add Results
           <div
             id="u3"
-            className="underLine w-[12vmin] h-[4px] bg-[#d3d3d3]"
+            className="underLine w-[16vmin] h-[4px] bg-[#d3d3d3]"
             onClick={() => {
               document.getElementById(active).style.backgroundColor = "#d3d3d3";
               setActive("u3");
@@ -72,7 +73,7 @@ const CMS = () => {
       </div>
 
       {(active === "u1" && <Teams />) ||
-        (active === "u2" && <Teams />) ||
+        (active === "u2" && <Dates />) ||
         (active === "u3" && <Results />) ||
         null}
 

@@ -8,6 +8,7 @@ import DBConnect from "./connection/DBConnect.js";
 import { TeamRouter } from "./routes/TeamRouter.js";
 import { generalRouter } from "./routes/generalRouter.js";
 import { resultRouter } from "./routes/resultRouter.js";
+import { datesRouter } from "./routes/datesRouter.js";
 //The important config settings...
 dotenv.config();
 const app = express();
@@ -24,7 +25,7 @@ DBConnect(process.env.MONGODB_URI);
 app.use("/", generalRouter);
 app.use("/api/v1/teams", TeamRouter);
 app.use("/api/v1/results", resultRouter);
-// app.use("/api/v1/dates");
+app.use("/api/v1/dates", datesRouter);
 // app.use("/api/v1/accept");
 // app.use("/api/v1/dump");
 
