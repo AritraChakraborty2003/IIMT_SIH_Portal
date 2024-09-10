@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 
 const Header = (props) => {
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
+    if (props.category != "admin") {
+      localStorage.removeItem("isLoggedIn");
+    } else {
+      localStorage.removeItem("isLoggedInAdmin");
+    }
     window.location.href = "/";
   };
   return (
@@ -52,7 +56,7 @@ const Header = (props) => {
           <div className="middleHolder w-[40vw] lg:w-[73vw]"></div>
           <div className="iconHolder">
             <button
-              className="bg-white text-black p-2 lg:h-[6vmin] w-[20vmin] mt-[-2vmin] lg:mt-2"
+              className="bg-white rounded-[1vmin] text-black p-2 lg:h-[6vmin] w-[20vmin] mt-[-2vmin] lg:mt-2"
               onClick={handleLogout}
             >
               Logout

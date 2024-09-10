@@ -1,6 +1,9 @@
 import Footer from "./Footer";
 import Header from "./Header";
+import { useLocation } from "react-router-dom";
 const Dashboard = () => {
+  const location = useLocation();
+  //console.log(location.state.val);
   return (
     <>
       {localStorage.getItem("isLoggedIn") === "true" ? (
@@ -16,7 +19,7 @@ const Dashboard = () => {
                 </p>
               </div>
             </div>
-            <div className="p-2 SelectionArea w-[100vw] h-[50vh]">
+            <div className="p-4 SelectionArea w-[100vw] h-[50vh]">
               <h1 className="text-[6vmin] font-extrabold">Results:</h1>
               <div className="textHolder h-[35vh] flex justify-center items-center">
                 <p className="text-center text-2xl">

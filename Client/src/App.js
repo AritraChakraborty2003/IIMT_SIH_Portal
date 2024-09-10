@@ -7,6 +7,7 @@ import Login from "./Components/Login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./Components/Dashboard";
 import AdminLogin from "./Components/AdminLogin";
+import CMS from "./Components/CMS";
 const AppLayout = () => {
   return (
     <>
@@ -33,6 +34,10 @@ const appRouter = createBrowserRouter([
   {
     path: "/admin",
     element: <AdminLogin />,
+  },
+  {
+    path: "/cms",
+    element: <CMS />,
   },
 ]);
 

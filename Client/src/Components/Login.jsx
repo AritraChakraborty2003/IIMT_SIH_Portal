@@ -2,7 +2,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { API_Test_URL, API_Production_URL } from "../../utils/constants";
 import axios from "axios";
+import { useNavigate, useLocation } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
   const sendData = (e) => {
     e.preventDefault();
     const teamName = document.getElementById("teamName").value;
@@ -18,7 +20,7 @@ const Login = () => {
         .then((res) => {
           if (res.data.message === "Login successful") {
             localStorage.setItem("isLoggedIn", true);
-            window.location.href = "/dashboard";
+            navigate("/dashboard", { state: { val: teamName } });
           } else {
             alert("Invalid Credentials");
           }

@@ -18,7 +18,7 @@ const AdminLogin = () => {
         password === process.env.REACT_ADMIN_PASSWORD
       ) {
         localStorage.setItem("isLoggedInAdmin", true);
-        window.location.href = "/";
+        window.location.href = "/cms";
         //   axios
         //     .post(API_Production_URL + "teams/login/", {
         //       teamName: teamName,
