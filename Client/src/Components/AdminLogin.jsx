@@ -2,7 +2,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { API_Test_URL, API_Production_URL } from "../../utils/constants";
 import axios from "axios";
-const Login = () => {
+import dotenv from "dotenv";
+
+dotenv.config();
+const AdminLogin = () => {
   const sendData = (e) => {
     e.preventDefault();
     const teamName = document.getElementById("teamName").value;
@@ -10,22 +13,31 @@ const Login = () => {
     if (teamName === "" || password === "") {
       alert("Invalid Credentials");
     } else {
-      axios
-        .post(API_Production_URL + "teams/login/", {
-          teamName: teamName,
-          password: password,
-        })
-        .then((res) => {
-          if (res.data.message === "Login successful") {
-            localStorage.setItem("isLoggedIn", true);
-            window.location.href = "/dashboard";
-          } else {
-            alert("Invalid Credentials");
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      if (
+        teamName === process.env.REACT_ADMIN_USERNAME &&
+        password === process.env.REACT_ADMIN_PASSWORD
+      ) {
+        localStorage.setItem("isLoggedInAdmin", true);
+        window.location.href = "/";
+        //   axios
+        //     .post(API_Production_URL + "teams/login/", {
+        //       teamName: teamName,
+        //       password: password,
+        //     })
+        //     .then((res) => {
+        //       if (res.data.message === "Login successful") {
+        //         localStorage.setItem("isLoggedIn", true);
+        //         window.location.href = "/dashboard";
+        //       } else {
+        //         alert("Invalid Credentials");
+        //       }
+        //     })
+        //     .catch((err) => {
+        //       console.log(err);
+        //     });
+      } else {
+        alert("Invalid Credentials");
+      }
     }
   };
   return (
@@ -55,7 +67,7 @@ const Login = () => {
         <div className="p-2 rightHolder w-[95vw] lg:w-[50vw] flex justify-center items-center">
           <div>
             <p className="mt-[5vmin] lg:mt-[0] text-2xl font-roboto font-extrabold">
-              Login to your dashboard!...
+              Login in to Admin account!...
             </p>
             <p />
             <div className=" mt-4 flex flex-col rounded-[3vmin] justify-center items-center form border-[3px] w-[95vw] p-4 lg:w-[45vw] ">
@@ -90,4 +102,5 @@ const Login = () => {
     </>
   );
 };
-export default Login;
+
+export default AdminLogin;
