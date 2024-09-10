@@ -19,7 +19,7 @@ const Teams = () => {
     <>
       <div className="lg:pb-[10vmin] mt-1 lg:mt-10 TeamHolder flex flex-wrap lg:space-x-10 justify-center items-center w-[100vw] space-y-5">
         {(data.length === 0 && <p>Loading Teams....</p>) ||
-          data.map((val) => {
+          data.slice(2).map((val) => {
             return <Teamcard key={val._id} data={val} />;
           })}
       </div>
